@@ -92,5 +92,48 @@ console.log(list)
 list.shift()
 console.log(list)
 
+//insere um item no inicio do array
+list.unshift('inicio')
+console.log(list)
 
-list.unshift('oi')
+//retira um pedaço do array pelo indice
+console.log(list.splice(1,5))
+
+//método do objeto
+const product = {
+    name: 'camisa',
+    price: 15.99,
+    inStock: true,
+    sizes: ['p', 'M', 'G']
+}
+
+//percorremos as propriedades do objeto com o .
+console.log(product.name)
+console.log(product.price)
+console.log(product.inStock)
+console.log(product.sizes)
+
+//adicionando uma nova propriedade no objeto
+product.color = ['Azul', 'Rosa']
+
+console.log(product)
+
+const {price, sizes} = product
+
+console.log(price, sizes)
+
+const cat = {
+    name: 'Minhete',
+    age: 10,
+    race: 'srd'
+}
+
+console.log(cat)
+
+// transforma em string
+const catString = JSON.stringify(cat)
+console.log(catString)
+
+//transforma em JSON
+const catTOJson = JSON.parse(catString)
+console.log(catTOJson)
